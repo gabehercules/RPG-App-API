@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campaigns",
+  "info": {
+    "singularName": "campaign",
+    "pluralName": "campaigns",
+    "displayName": "Campaign"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "synopsis": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "private": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "maxPlayers": {
+      "type": "integer",
+      "required": true,
+      "default": 4
+    },
+    "slug": {
+      "type": "uid",
+      "required": false
+    },
+    "system": {
+      "type": "enumeration",
+      "enum": [
+        "D&D 5E",
+        "Tormenta 20",
+        "Pathfinder",
+        "Ordem Paranormal",
+        "Outro"
+      ],
+      "required": true,
+      "default": "D&D 5E"
+    }
+  }
+}
